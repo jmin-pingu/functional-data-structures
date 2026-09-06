@@ -1,2 +1,3 @@
-# functional-data-structures
-Functional Data Structures in Haskell
+# fds - Functional Data Structures in Haskell
+
+Working through Functional Data Structures by Chris Okasaki.
