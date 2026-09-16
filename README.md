@@ -1,3 +1,3 @@
-# fds - Functional Data Structures in Haskell
+# Functional Data Structures
 
-Working through Functional Data Structures by Chris Okasaki.
+An implementation of Functional Data Structures by Chris Okasaki in Haskell.
