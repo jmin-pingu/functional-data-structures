@@ -85,4 +85,3 @@ findMinDirect (t:ts) = min (root t) (findMinDirect ts)
 -- as a parameter. Complete this functor so that findMin takes O(1) time and insert, merge, and 
 -- deleteMin take O(log n) time.
 
-

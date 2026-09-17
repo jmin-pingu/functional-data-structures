@@ -92,3 +92,4 @@ spec = do
     prop "shares structure: every suffix is a tail' chain of the original" $
       \(xs :: [Int]) ->
         all (`elem` tails xs) (suffixesOf xs)
+

@@ -120,3 +120,4 @@ iterateDeleteMin :: Ord x => LeftistHeap x -> [LeftistHeap x]
 iterateDeleteMin h
   | isEmpty h = [h]
   | otherwise = h : iterateDeleteMin (deleteMin h)
+

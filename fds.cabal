@@ -67,6 +67,8 @@ test-suite fds-test
       BSTreeSpec
       HeapSpec
       ListSpec
+      RBTreeSpec
+      SetSpec
       Paths_fds
   autogen-modules:
       Paths_fds

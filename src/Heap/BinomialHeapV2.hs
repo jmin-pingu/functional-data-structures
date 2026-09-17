@@ -57,24 +57,6 @@ removeMinTree [] = error "BinomialHeap is empty"
 removeMinTree [(_, t)] = (t, [])
 removeMinTree ((r, t):ts) = let (t', ts') = removeMinTree ts in if root t <= root t' then (t, ts) else (t', (r, t) : ts')
 
-fromL :: Ord x => [x] -> BinomialHeapV2 x
-fromL = foldl insert []
-
-validTree :: Ord x => (Int, BinomialTreeV2 x) -> Bool
-validTree (r, t@(Node x ts)) =
-  length ts == r
-    && length (treeElems t) == 2 ^ r
-    && all ((x <=) . root) ts
-    && all validTree (zip [r-1, r-2..0] ts)
-
-treeElems :: BinomialTreeV2 x -> [x]
-treeElems (Node x ts) = x : concatMap treeElems ts
-
--- A binomial heap holds at most one tree per rank, in increasing rank order.
-validHeap :: Ord x => BinomialHeapV2 x -> Bool
-validHeap h = all validTree h && increasing (map rank h)
-  where increasing rs = and (zipWith (<) rs (drop 1 rs))
-
 deleteMin :: (Ord x) => BinomialHeapV2 x -> BinomialHeapV2 x
 deleteMin [] = error "BinomialHeap is empty"
 deleteMin t = let 

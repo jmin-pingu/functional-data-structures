@@ -76,3 +76,4 @@ spec = do
     prop "is balanced" $
       forAll (choose (0, 6 :: Int)) $ \d ->
         depth (T.complete 'x' d) == d + 1
+
